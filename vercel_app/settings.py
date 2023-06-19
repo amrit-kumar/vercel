@@ -119,6 +119,19 @@ DATABASES = {
 #     }
 # }
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',  # <-- And here
+    ],
+
+    # 'DEFAULT_AUTHENTICATION_CLASSES': [
+    #     'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+    #
+    # ],
+    # 'DEFAULT_PERMISSION_CLASSES': (
+    #     'rest_framework.permissions.IsAuthenticated',
+    # )
+}
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
